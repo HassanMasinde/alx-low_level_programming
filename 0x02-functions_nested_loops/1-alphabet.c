@@ -1,4 +1,4 @@
-#include <main.h>
+#include "main.h"
 
 /**
  * main - print the alphabets
@@ -7,11 +7,13 @@
 
 void print_alphabet(void)
 {
-	char songi;
+	char c;
 
-	for (songi = 'a'; songi <= 'z'; songi++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
-		putchar(songi);
+		_putchar(c);
 	}
 	_putchar('\n');
+
+}
 
