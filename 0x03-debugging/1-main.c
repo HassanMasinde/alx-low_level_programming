@@ -2,6 +2,7 @@
 
 /**
 * main - causes an infinite loop
+* i never increments so it is always going to print 0
 * Return: 0
 */
 
