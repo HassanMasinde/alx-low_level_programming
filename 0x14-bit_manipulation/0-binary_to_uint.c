@@ -9,16 +9,19 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int ko = 0;
-	int k;
+	int ko;
+	unsigned int dec_val = 0;
 
-	while (*b != '\0')
+	if (!*b)
 		return (0);
-	for (ko = 0; b[k]; k++)
+
+	for (ko = 0; b[ko]; ko++)
 	{
-		if (b[k] > '1' || b[k] < '0')
+		if (b[ko] < '0' || b[ko] > '1')
 			return (0);
-		k = 2 * k + (b[k] - '0');
+		dec_val = 2 * dec_val + (b[ko] - '0');
 	}
-	return (ko);
+
+	return (dec_val);
 }
+
